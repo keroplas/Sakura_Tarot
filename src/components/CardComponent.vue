@@ -2,12 +2,15 @@
 import { ref } from 'vue';
 import ConnectApi from '../services/ConnectApi';
 
+/*
 let props=defineProps({
     miarray:{
-        type: String, 
-        //default:[4, 50, 54]
+        type: Array, 
+        default:[1,2,3]
     }
-});
+});*/
+
+
 
 const arrayTimes=["Pasado", "Presente", "Futuro"];
 let arrayIndex=0;
@@ -17,7 +20,14 @@ const cardSrc=ref();
 const cardMeaning=ref();
 const timeMoment=ref(arrayTimes[0]);
 
-console.log(JSON.parse(props.miarray));
+/*let data = function() {
+    return this.$route.params.props;
+
+  }
+
+  console.log(data());*/
+
+console.log(this.$route.params.props);
 
 IncomingArray.value=props.miarray;
 RetrieveCard(arrayIndex);

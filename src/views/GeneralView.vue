@@ -19,14 +19,14 @@
     const chooseCard = () => {
         //console.log(timeline);
         if (counter.value === 3) {
-            router.params({miarray: JSON.stringify([2,4,5])});
-
+            //router.params({miarray: JSON.stringify([2,4,5])});
+            let myProp={props:[3,5,7]}
             router.push ( {
-                path: '../components/CardComponent',
+                path: '/CardComponent/:props',
                 name: 'CardComponent',                
-                props: {miarray:true},
-                component: CardComponent,
-                               
+                props: true,
+                params: {props:"miau"},
+                component: myProp,                               
             })
         }
         else {

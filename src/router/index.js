@@ -13,7 +13,7 @@ const router = createRouter({
       component: GeneralView
     },
     {
-      path: '/CardComponent',
+      path: '/CardComponent/:props',
       name: 'CardComponent',
       component: CardComponent
     },
