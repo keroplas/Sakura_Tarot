@@ -14,14 +14,19 @@
 
     const counter = ref(1);
 
-    const timeline = ref("Pasado");
+    const timeline = ref("Pasado");    
 
     const chooseCard = () => {
+        //console.log(timeline);
         if (counter.value === 3) {
+            router.params({miarray: JSON.stringify([2,4,5])});
+
             router.push ( {
-                path: '/',
-                name: 'CardComponent',
-                component: CardComponent                
+                path: '../components/CardComponent',
+                name: 'CardComponent',                
+                props: {miarray:true},
+                component: CardComponent,
+                               
             })
         }
         else {
