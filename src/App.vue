@@ -38,6 +38,5 @@ import CardComponent from './components/CardComponent.vue';
 
     #logo {
         height: 6vh;
-        /* margin: 0 auto; */
     }
 </style>
